@@ -1,12 +1,1 @@
-[
-    [
-        {
-            "id":"fffv"
-        }
-                {
-                    "title":"dfgggddd",
-                    "image":"https://avatars.mds.yandex.net/i?id=344a9bfdaafafb3cef0a25a4509a76542c63412688bc0c35-10869960-images-thumbs&n=13",
-                    "content":"dsrfer"
-                }
-    ]
-]
+{"0": {"0": {"id": 1, "company": "dfgggddd", "marka": "dfddf", "image": "https://avatars.mds.yandex.net/i?id=344a9bfdaafafb3cef0a25a4509a76542c63412688bc0c35-10869960-images-thumbs&n=13", "number_phone": 233, "description": "dsrfer"}}}
