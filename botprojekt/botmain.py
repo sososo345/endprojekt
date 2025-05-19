@@ -25,10 +25,10 @@ def get_next_id() -> int:
     car = get_car_by_id(car_id)
     return max(car["id"] for car in data) + 1 if data else 1
 
-def get_car_by_id(car_id: int) -> Optional[Dict]:
+def get_car_by_id(id: int) -> Optional[Dict]:
     cars = read_data()
     for car in data:
-        if car["id"] == car_id:
+        if car["id"] == id:
             return car
     return None
     
@@ -37,20 +37,48 @@ def get_car_by_id(car_id: int) -> Optional[Dict]:
 async def start(message:types.Message):
     await message.answer('ffgg')
 
+#получка данных на продажу
+@dp.message(Command("company"))
+async def company(message: types.message):
+    company = message.text.replace("/company", "").strip()
+    return company
+
+@dp.message(Command("marka"))
+async def marka(message: types.message):
+    marka = message.text.replace("/marka", "").strip()
+    return marka
+
+@dp.message(Command("image"))
+async def image(message: types.message):
+    image = message.text.replace("/image", "").strip()
+    return image
+
+@dp.message(Command("number_phone"))
+async def number_phone(message: types.message):
+    number_phone = message.text.replace("/number_phone", "").strip()
+    return number_phone
+
+@dp.message(Command("description"))
+async def description(message: types.message):
+    description = message.text.replace("/description", "").strip()
+    return description
+
+#команды для машин
 @dp.message(Command("sell_car"))
 async def sell_car(message:types.Message):
-    cars = read_cars()
-    car = {
-        "car_id": get_next_id(),
-        "company": title,
-        "marka": author,
-        "image": description,
-        "number_phone": [g.strip() for g in genres.split(",")],
-        "description": year,
+    await message.answer('здравствуйте чтобы добавить машину в реестр объявлений вот команды для ввода:\n/company - компания производитель,\n/marka - марка машины,\n/image - ссылка на изображение,\n/number_phone - номер телефона,\n/description - описание')
+    cars = data()
+    new_car = {
+        "id": get_next_id(),
+        "company": company,
+        "marka": marka,
+        "image": image,
+        "number_phone":number_phone,
+        "description": description,
     }
     data.append(new_car)
     save_cars(data)
-    return {"message": "Book added successfully"}
+    return {"message": "вы выставили объявление о продаже"}
 
 @dp.message(Command("buy_car"))
 async def start(message:types.Message):
