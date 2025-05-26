@@ -1,7 +1,18 @@
 [
- {"id": 1, 
- "company": "dfgggddd", 
- "marka": "dfddf",
-  "image": "https://avatars.mds.yandex.net/i?id=344a9bfdaafafb3cef0a25a4509a76542c63412688bc0c35-10869960-images-thumbs&n=13",
-   "number_phone": 233, 
-   "description": "dsrfer"}]
+    {
+        "id": 1,
+        "company": "dfgggddd",
+        "marka": "dfddf",
+        "image": "https://avatars.mds.yandex.net/i?id=344a9bfdaafafb3cef0a25a4509a76542c63412688bc0c35-10869960-images-thumbs&n=13",
+        "number_phone": 233,
+        "description": "dsrfer"
+    },
+    {
+        "id": 2,
+        "company": "- компания производитель",
+        "marka": "ddfgh",
+        "image": "https://i.pinimg.com/originals/6d/0d/3d/6d0d3df5373826a306a614b97464e19b.jpg",
+        "number_phone": "1378888",
+        "description": "- компания"
+    }
+]
